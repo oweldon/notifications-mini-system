@@ -37,7 +37,6 @@ function App() {
     const result = await axios('/api/notifications')
     setNotifications([...notifications, result.data.results])
     localStorage.setItem('notificationsInLocalStorage', JSON.stringify(notifications));
-    console.log('notifications', notifications)
   }
   
   return (
